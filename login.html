@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/70ad3fdfa7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/layout.css">
+    <link rel="stylesheet" href="./assets/styles/header.css">
+    <link rel="stylesheet" href="./assets/styles/login.css">
+    <link rel="stylesheet" href="./assets/styles/form.css">
+    <link rel="stylesheet" href="./assets/styles/footer.css">
+    <title>AluraGeek - Login</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="./index.html">
+                    <div class="navbar__logo__svg"></div>
+                </a>
+                
+                <div class="navbar__searchbar">
+                    <input type="text" class="searchbar__input" placeholder="O que você deseja encontrar?"> 
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="login container">
+            <h1 class="login__title">Iniciar Sessão</h1>
+            <form class="form__container form__container-login">
+                <div class="field__container">
+                    <label for="username" class="form__label">E-mail</label>
+                    <input type="text" class="form__input" required placeholder="Digite seu e-mail">
+                </div>
+                <div class="field__container">
+                    <label for="password" class="form__label">Senha</label>
+                    <input type="password" class="form__input" required placeholder="Digite sua senha" >
+                </div>
+                <button class="button button-primary button-primary-login">Entrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer container">
+            <div class="footer__info">
+                <div class="footer__logo"></div>
+                <a href="" class="info__link">Quem somos nós</a>
+                <a href="" class="info__link">Política de privacidade</a>
+                <a href="" class="info__link">Programa fidelidade</a>
+                <a href="" class="info__link">Nossas lojas</a>
+                <a href="" class="info__link">Quero ser franqueado</a>
+                <a href="" class="info__link">Anuncie aqui</a>
+            </div>
+            <form class="form__container form__container-footer">
+                <h2 class="form__title-footer">Fale conosco</h2>
+                <div class="field__container">
+                    <label for="name" class="form__label">Nome</label>
+                    <input type="text" name="name" placeholder="Fulano da Silva" required class="form__input">
+                </div>
+                <div class="field__container">
+                    <label for="text" class="form__label">Digite sua mensagem</label>
+                    <textarea name="text" class="form__textarea" placeholder="Sua mensagem aqui" required ></textarea>
+                </div>
+                <div>
+                    <button class="button button-primary">Enviar mensagem</button>
+                </div>
+            </form>
+        </section>
+        <section class="copyright">
+            <p>Desenvolvido por Vinícius Vasques. <a href="https://www.linkedin.com/in/vinivasq/" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://github.com/vinivasq" target="_blank"><i class="fa-brands fa-github"></i></a></p> 
+        </section>
+    </footer>
+</body>
+</html>

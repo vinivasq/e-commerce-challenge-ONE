@@ -1,0 +1,31 @@
+.categorie{
+    padding-bottom: 1rem;
+}
+
+.categorie__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.menu__title{
+    font: var(--font-title);
+}
+
+.menu__link{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+    gap: 0.25rem;
+    font: var(--font-bold-sm);
+
+}
+
+@media screen and (max-width: 992px) {
+    .list__item:nth-child(n+5){
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+.add-product{
+    margin-top: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--white-100);
+}
+
+.button-primary-add-product{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .add-product{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .add-product{
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+}
