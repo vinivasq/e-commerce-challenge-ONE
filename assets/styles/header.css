@@ -63,4 +63,8 @@
         font: var(--font-light-sm);
     }
 
+    .searchbar__input:focus{
+        outline: none;
+    }
+
 }
