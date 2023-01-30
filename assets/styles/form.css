@@ -10,6 +10,11 @@
     align-items: flex-start;
 }
 
+.field__container-error{
+    background-color: var(--green-200);
+    font: var(--font-light-sm);
+}
+
 .field__container{
     box-shadow: 1px 0px 5px #00000027;
     background-color: #FFFFFF;
