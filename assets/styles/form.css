@@ -13,6 +13,12 @@
 .field__container-error{
     background-color: var(--green-200);
     font: var(--font-light-sm);
+    align-self: flex-start;
+}
+
+.field__container-error-product{
+    background-color: transparent;
+    color: var(--main-color);
 }
 
 .field__container{

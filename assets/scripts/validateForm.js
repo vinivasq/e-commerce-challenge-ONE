@@ -1,7 +1,10 @@
 const validateFields = (input) => {
-    let message = `
-        <i class="fa-solid fa-circle-info"></i> ${errorMessages[input.dataset.type]['valueMissing']}
-    `
+
+    if (input.value.trim() == '') {
+        input.setCustomValidity('O campo não pode estar em branco')
+    } else if(input.value != 0) {
+        input.setCustomValidity('')
+    }
 
     if(input.validity.valid){
         input.parentElement.nextElementSibling.innerHTML=''
@@ -9,10 +12,6 @@ const validateFields = (input) => {
         input.parentElement.nextElementSibling.innerHTML=showErrorMessage(input)
     }
     
-    if (input.value.trim() == '') {
-        console.log('ta vazio');
-        input.parentElement.nextElementSibling.innerHTML = message
-    }
 }
 
 const showErrorMessage = (input) => {
@@ -26,36 +25,70 @@ const showErrorMessage = (input) => {
     return message
 }
 
+const validatePrice = (input) => {
+    const inputValue = parseInt(input.value)
+
+    console.log(inputValue);
+    
+    if(inputValue <= 0) {
+        input.setCustomValidity('O preço deve ser maior que R$ 0,00.')
+    } else {
+        input.setCustomValidity('')
+    }
+}
+
 const errorTypes = [
-    'valueMissing',
+    'customError'
 ]
 
 const errorMessages = {
     name: {
-        valueMissing: 'O campo "Nome" não pode ficar vazio.'
+        customError: 'O campo "Nome" não pode ficar em branco.'
     },
     message: {
-        valueMissing: 'O campo "Menssagem" não pode ficar vazio.'
+        customError: 'O campo "Menssagem" não pode ficar em branco.'
+    },
+    imageURL: {
+        customError: 'O campo "Imagem" não pode ficar em branco.'
+    },
+    category: {
+        customError: 'O campo "Categoria" não pode ficar em branco.'
+    },
+    productName: {
+        customError: 'O campo "Nome do produto" não pode ficar em branco.'
+    },
+    price: {
+        customError: 'O preço do produto deve ser maior do que R$ 0,00.'
+    },
+    productDescription: {
+        customError: 'O campo "Descrição do produto" não pode ficar em branco.'
     }
 }
 
+const forms = document.querySelectorAll('.form__container')
 const inputs = document.querySelectorAll('input')
-const textareaMessage = document.querySelector("[data-type='message']")
-const buttonSendMessage = document.querySelector("[data-button-sendMessage]")
+const textareas = document.querySelectorAll("textarea")
 
 inputs.forEach(input => {
     input.addEventListener('blur', () => {
+        if(input.dataset.type == "price"){
+            validatePrice(input)
+        }
         validateFields(input)
     })
 })
 
-textareaMessage.addEventListener('blur', () => {
-    validateFields(textareaMessage)
+textareas.forEach(textarea => {
+    textarea.addEventListener('blur', () => {
+        validateFields(textarea)
+    })
 })
 
-buttonSendMessage.addEventListener('click', (e) => {
-    e.preventDefault()
-
-    inputs.forEach(input => input.value = '')
-    textareaMessage.value = ''
+forms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+    
+        inputs.forEach(input => input.value = '')
+        textareas.forEach(textarea => textarea.value = '')
+    })
 })
