@@ -1,8 +1,10 @@
 const validateFields = (input) => {
-
+    
     if (input.value.trim() == '') {
         input.setCustomValidity('O campo não pode estar em branco')
-    } else if(input.value != 0) {
+    } else if(input.dataset.type == "price" && input.value == "R$0,00") {
+        input.setCustomValidity('O preço deve ser maior que R$ 0,00.')
+    } else {
         input.setCustomValidity('')
     }
 
@@ -12,18 +14,6 @@ const validateFields = (input) => {
         input.parentElement.nextElementSibling.innerHTML=showErrorMessage(input)
     }
     
-}
-
-const validatePrice = (input) => {
-    const inputValue = parseInt(input.value)
-
-    console.log(inputValue);
-    
-    if(inputValue <= 0) {
-        input.setCustomValidity('O preço deve ser maior que R$ 0,00.')
-    } else {
-        input.setCustomValidity('')
-    }
 }
 
 const showErrorMessage = (input) => {
@@ -65,15 +55,25 @@ const errorMessages = {
     }
 }
 
+const setMaskMoney = (input) => {
+    SimpleMaskMoney.setMask(input, {
+        prefix: 'R$',
+        fixed: true,
+        fractionDigits: 2,
+        decimalSeparator: ',',
+        thousandsSeparator: '.',
+        cursor: 'end'
+    })
+}  
+
 const forms = document.querySelectorAll('.form__container')
 const inputs = document.querySelectorAll('input')
 const textareas = document.querySelectorAll("textarea")
 
 inputs.forEach(input => {
+    if(input.dataset.type == "price") setMaskMoney(input)      
+    
     input.addEventListener('blur', () => {
-        if(input.dataset.type == "price"){
-            validatePrice(input)
-        }
         validateFields(input)
     })
 })
@@ -88,7 +88,10 @@ forms.forEach(form => {
     form.addEventListener('submit', (e) => {
         e.preventDefault()
     
-        inputs.forEach(input => input.value = '')
+        inputs.forEach(input => {
+            input.value = ''
+            if(input.dataset.type == "price") setMaskMoney(input)      
+        })
         textareas.forEach(textarea => textarea.value = '')
     })
 })
