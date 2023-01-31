@@ -14,17 +14,6 @@ const validateFields = (input) => {
     
 }
 
-const showErrorMessage = (input) => {
-    const inputType = input.dataset.type
-    let message = ''
-    errorTypes.forEach(error => {
-        if(input.validity[error]){
-            message = `<i class="fa-solid fa-circle-info"></i> ${errorMessages[inputType][error]}`
-        }
-    })
-    return message
-}
-
 const validatePrice = (input) => {
     const inputValue = parseInt(input.value)
 
@@ -35,6 +24,17 @@ const validatePrice = (input) => {
     } else {
         input.setCustomValidity('')
     }
+}
+
+const showErrorMessage = (input) => {
+    const inputType = input.dataset.type
+    let message = ''
+    errorTypes.forEach(error => {
+        if(input.validity[error]){
+            message = `<i class="fa-solid fa-circle-info"></i> ${errorMessages[inputType][error]}`
+        }
+    })
+    return message
 }
 
 const errorTypes = [
