@@ -28,7 +28,9 @@ const showErrorMessage = (input) => {
 }
 
 const errorTypes = [
-    'customError'
+    'customError',
+    'patternMismatch',
+    'typeMismatch'
 ]
 
 const errorMessages = {
@@ -37,6 +39,22 @@ const errorMessages = {
     },
     message: {
         customError: 'O campo "Menssagem" não pode ficar em branco.'
+    },
+    email: {
+        customError: 'O campo "Email" não pode ficar em branco.',
+        patternMismatch: 'O e-mail deve ser válido! ex: seunome@provedor.com',
+        typeMismatch:  'O e-mail deve ser válido! ex: seunome@provedor.com'
+    },
+    password: {
+        customError: 'O campo "Senha" não pode ficar em branco',
+        patternMismatch: 
+            `A senha deve conter no mínimo: </br>
+                - Entre 6 a 12 caracteres.</br>
+                - Uma letra maiúscula.</br>
+                - Uma letra minúscula.</br>
+                - Um número.</br>
+                (não pode conter espaços)
+            `
     },
     imageURL: {
         customError: 'O campo "Imagem" não pode ficar em branco.'
