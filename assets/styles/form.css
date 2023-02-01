@@ -15,6 +15,7 @@
     background-color: #FFFFFF;
     border-radius: 5px;
     width: 100%;
+    padding: 0.5rem 0.75rem;
 }
 
 .field__container-error{
@@ -28,6 +29,9 @@
     color: var(--black);
 }
 
+.field__container-error-image{
+    align-self: center;
+}
 
 .field__container-imageSelector{
     width: auto;
@@ -46,12 +50,10 @@
     font: var(--font-light-sm);
     color: var(--black-500);
     width: 100%;
-    padding: 0.5rem 0.75rem;
 }
 
 .form__input{
     width: 100%;
-    padding: 0.5rem 0.75rem;
     font: var(--font-light);
 }
 

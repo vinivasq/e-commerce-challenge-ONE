@@ -38,21 +38,23 @@
             <div class="field__container field__container-imageSelector">
                 <label class="form__label" for="imageURL">Selecione uma imagem</label>
                 <div class="image_selector__container">
-                    <div
-                        class="dropzone"
-                        data-dropzone
-                    >
-                        <p class="dropzone__description">
-                            <i class="fa-solid fa-image"></i>
-                            Arraste para adicionar uma imagem ao produto
-                        </p>
+                    <div class="dropzone__container">
+                        <div
+                            class="dropzone"
+                            data-dropzone
+                        >
+                            <p class="dropzone__info">
+                                <i class="fa-solid fa-image"></i>
+                                Arraste para adicionar uma imagem ao produto
+                            </p>
+                        </div>
                     </div>
                     <p class="image_selector__description">OU</p>
                     <input
                         id="input__file"
                         name="imageURL"
-                        required
                         type="file"
+                        accept="image/*"
                         data-type="imageURL"
                     >
                     <label for="input__file" class="button button-secondary">
@@ -60,7 +62,7 @@
                     </label>
                 </div>
             </div>
-            <span class="field__container-error"></span>
+            <span class="field__container-error field__container-error-image" data-imageSelector-error></span>
             <div class="field__container">
                 <label class="form__label" for="category">Categoria</label>
                 <input 

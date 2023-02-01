@@ -1,14 +1,31 @@
+.dropzone__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
 .dropzone{
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    height: 30vh;
-    width: 40%;
+    height: 12.5rem;
+    width: 15.5rem;
     border: 2px dashed var(--main-color);
     border-radius: 5px;
 }
 
-.dropzone__description{
+.active {
+    border: 2px solid var(--main-color);
+}
+
+.dropzone > figure, img {
+    height: 100%;
+    width: 100%;
+}
+
+.dropzone__info{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,12 +36,16 @@
     cursor: default;
 }
 
+.dropzone__description{
+    font: var(--font-light-sm);
+}
+
 .image_selector__container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 0.5rem 0.75rem;
-    gap: 1rem;
+    padding: 1rem ;
+    gap: 4rem;
 }
 
 .image_selector__description{
