@@ -1,0 +1,40 @@
+.dropzone{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    width: 40%;
+    border: 2px dashed var(--main-color);
+    border-radius: 5px;
+}
+
+.dropzone__description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    color: var(--main-color);
+    width: 70%;
+    text-align: center;
+    cursor: default;
+}
+
+.image_selector__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    gap: 1rem;
+}
+
+.image_selector__description{
+    font: var(--font-light-sm);
+}
+
+.image_selector__container > label {
+    cursor: pointer;
+}
+
+input[type="file"]{
+    display: none;
+}

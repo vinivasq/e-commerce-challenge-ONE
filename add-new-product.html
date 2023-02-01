@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/layout.css">
     <link rel="stylesheet" href="./assets/styles/header.css">
+    <link rel="stylesheet" href="./assets/styles/imageSelector.css">
     <link rel="stylesheet" href="./assets/styles/add-product.css">
     <link rel="stylesheet" href="./assets/styles/form.css">
     <link rel="stylesheet" href="./assets/styles/footer.css">
@@ -34,16 +35,32 @@
     <main class="add-product container">
         <form class="form__container">
             <h1 class="form__title">Adicionar novo produto</h1>
-            <div class="field__container">
-                <label class="form__label" for="imageURL">URL da imagem</label>
-                <input 
-                    class="form__input" 
-                    name="imageURL"
-                    required type="text" 
-                    data-type="imageURL"
-                >
+            <div class="field__container field__container-imageSelector">
+                <label class="form__label" for="imageURL">Selecione uma imagem</label>
+                <div class="image_selector__container">
+                    <div
+                        class="dropzone"
+                        data-dropzone
+                    >
+                        <p class="dropzone__description">
+                            <i class="fa-solid fa-image"></i>
+                            Arraste para adicionar uma imagem ao produto
+                        </p>
+                    </div>
+                    <p class="image_selector__description">OU</p>
+                    <input
+                        id="input__file"
+                        name="imageURL"
+                        required
+                        type="file"
+                        data-type="imageURL"
+                    >
+                    <label for="input__file" class="button button-secondary">
+                        Procure no seu computador
+                    </label>
+                </div>
             </div>
-            <span class="field__container-error" data-form-error-message></span>
+            <span class="field__container-error"></span>
             <div class="field__container">
                 <label class="form__label" for="category">Categoria</label>
                 <input 
@@ -55,7 +72,7 @@
                     data-type="category" 
                 >
             </div>
-            <span class="field__container-error" data-form-error-message></span>
+            <span class="field__container-error"></span>
             <div class="field__container">
                 <label class="form__label" for="productName">Nome do produto</label>
                 <input 
@@ -67,7 +84,7 @@
                     data-type="productName"
                 >
             </div>
-            <span class="field__container-error" data-form-error-message></span>
+            <span class="field__container-error"></span>
             <div class="field__container">
                 <label class="form__label" for="price">Preço do produto</label>
                 <input 
@@ -78,7 +95,7 @@
                     data-type="price"
                 >
             </div>
-            <span class="field__container-error" data-form-error-message></span>
+            <span class="field__container-error"></span>
             <div class="field__container">
                 <label for="productDescription" class="form__label">Descrição do produto</label>
                 <textarea 
@@ -89,7 +106,7 @@
                     data-type="productDescription"
                 ></textarea>
             </div>
-            <span class="field__container-error" data-form-error-message></span>
+            <span class="field__container-error"></span>
             <button class="button button-primary button-primary-add-product" data-button-addProduct>Adicionar produto</button>
         </form>    
     </main>
@@ -118,7 +135,7 @@
                         data-type="name"
                     >
                 </div>
-                <span class="field__container-error field__container-error-footer" data-form-error-message></span>
+                <span class="field__container-error field__container-error-footer"></span>
                 <div class="field__container">
                     <label for="text" class="form__label">Digite sua mensagem</label>
                     <textarea 
@@ -130,7 +147,7 @@
                         data-type="message"    
                     ></textarea>
                 </div>
-                <span class="field__container-error field__container-error-footer" data-form-error-message></span>
+                <span class="field__container-error field__container-error-footer"></span>
                 <button class="button button-primary" data-button-sendMessage>Enviar mensagem</button>
             </form>
         </section>
@@ -139,6 +156,7 @@
         </section>
     </footer>
     <script src="./assets/scripts/validateForm.js" type="module"></script>
+    <script src="./assets/scripts/drag-and-drop.js" type="module"></script>
     <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>  
 </body>
 </html>

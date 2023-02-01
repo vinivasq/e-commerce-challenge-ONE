@@ -10,6 +10,13 @@
     align-items: flex-start;
 }
 
+.field__container{
+    box-shadow: 1px 0px 5px #00000027;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 100%;
+}
+
 .field__container-error{
     align-self: flex-start;
     background-color: transparent;
@@ -21,11 +28,9 @@
     color: var(--black);
 }
 
-.field__container{
-    box-shadow: 1px 0px 5px #00000027;
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    width: 100%;
+
+.field__container-imageSelector{
+    width: auto;
 }
 
 .form__title{
