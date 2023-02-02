@@ -1,8 +1,31 @@
+.image_selector__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem ;
+    gap: 1rem;
+    width: 100%;
+}
+
+.image_selector__description{
+    font: var(--font-light-sm);
+}
+
+.image_selector__container > label {
+    cursor: pointer;
+}
+
+input[type="file"]{
+    display: none;
+}
+
 .dropzone__container{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: .5rem;
+    height: 12.5rem;
+    width: 35%;
 }
 
 .dropzone{
@@ -10,14 +33,20 @@
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    height: 12.5rem;
-    width: 15.5rem;
+    width: 100%;
+    height: 100%;
     border: 2px dashed var(--main-color);
     border-radius: 5px;
+    background-color: var(--green-50);
 }
 
 .active {
     border: 2px solid var(--main-color);
+}
+
+.filled {
+    border: none;
+    box-shadow: 1px 0px 5px #00000027;
 }
 
 .dropzone > figure, img {
@@ -38,24 +67,44 @@
 
 .dropzone__description{
     font: var(--font-light-sm);
+    width: 100%;
+    text-align: center;
 }
 
-.image_selector__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem ;
-    gap: 4rem;
-}
-
-.image_selector__description{
-    font: var(--font-light-sm);
-}
-
-.image_selector__container > label {
-    cursor: pointer;
-}
-
-input[type="file"]{
+.label-container__title {
     display: none;
+}
+
+@media screen and (max-width:992px) {
+    .label-container__title{
+        display: inline-flex;
+        font: var(--font-regular);
+    }
+
+    .dropzone, .image_selector__description {
+        display: none;
+    }
+
+    .image_selector__container {
+        flex-direction: column;
+        gap: .5rem;
+        align-items: flex-start;
+    }
+
+    .dropzone__container {
+        height: auto;
+    }
+
+    .image_selector__label-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        order: -1;
+    }
+
+    .image_selector__container > label {
+        display: flex;
+    }
 }

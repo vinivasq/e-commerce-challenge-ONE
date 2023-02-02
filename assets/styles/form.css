@@ -34,7 +34,8 @@
 }
 
 .field__container-imageSelector{
-    width: auto;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .form__title{

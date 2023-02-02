@@ -4,8 +4,9 @@
     --black: #171717;
     --black-200: #e7e5e4;
     --black-500: #737373;
-    --main-color: #16a34a;
+    --green-50: #f0fdf4;
     --green-200: #bbf7d0;
+    --main-color: #16a34a;
 
     --font-light-sm: 400 0.75rem Raleway;
     --font-light: 400 1rem Raleway;
@@ -60,6 +61,7 @@ ul {
     border-radius: 5px;
     font: var(--font-semibold-sm);
     padding: 0.75rem 1rem;
+    text-align: center;
 }
 
 .button-primary {
