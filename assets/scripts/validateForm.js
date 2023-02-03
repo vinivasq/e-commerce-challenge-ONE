@@ -105,10 +105,15 @@ textareas.forEach(textarea => {
 forms.forEach(form => {
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-    
+
+        if (form.dataset.type == "form-login") {
+            const isLogged = true
+            localStorage.setItem("isLogged", JSON.stringify(isLogged))
+        }
+
         inputs.forEach(input => {
             input.value = ''
-            if(input.dataset.type == "price") setMaskMoney(input)      
+            if(input.dataset.type == "price") setMaskMoney(input)
         })
         textareas.forEach(textarea => textarea.value = '')
     })
