@@ -28,6 +28,11 @@ const dropZoneContainer = document.querySelector(".dropzone__container")
 const dropZone = document.querySelector('[data-dropzone]')
 const inputFile = document.querySelector('#input__file')
 const errorMessage = document.querySelector('[data-imageSelector-error]')
+const buttonSearchImage = document.querySelector('[data-label-searchImage]')
+
+if(window.innerWidth >= 992){
+    buttonSearchImage.innerHTML ='Procure no seu computador'
+}
 
 inputFile.addEventListener('change', (e) => {
     e.preventDefault()
