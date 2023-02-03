@@ -23,9 +23,3 @@
     font: var(--font-bold-sm);
 
 }
-
-@media screen and (max-width: 992px) {
-    .list__item:nth-child(n+5){
-        display: none;
-    }
-}

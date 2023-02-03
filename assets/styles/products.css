@@ -63,6 +63,13 @@
     }
 }
 
+
+@media screen and (max-width: 992px) {
+    .list__item-home:nth-child(n+5){
+        display: none;
+    }
+}
+
 @media screen and (min-width: 992px) {
     .list__item{
         width: calc(16.67% - 1rem);
