@@ -109,6 +109,7 @@ forms.forEach(form => {
         if (form.dataset.type == "form-login") {
             const isLogged = true
             localStorage.setItem("isLogged", JSON.stringify(isLogged))
+            location.href = './products-manager.html'
         }
 
         inputs.forEach(input => {
