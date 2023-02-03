@@ -14,13 +14,18 @@ const fileHandler = (file, name, type) => {
     reader.onloadend = () => {
         dropZone.innerHTML = ''
         dropZone.classList.add('filled')
+        
+        const productImage = reader.result
         const img = document.createElement("img");
         const imgDescription = document.createElement("span")
+        
         imgDescription.classList.add('dropzone__description')
         imgDescription.innerHTML = name
-        img.src = reader.result
+        img.src = productImage
         dropZone.appendChild(img)
         dropZoneContainer.appendChild(imgDescription )
+
+        localStorage.setItem('productImage', JSON.stringify(productImage))
     }
 } 
 
