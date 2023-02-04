@@ -1,0 +1,19 @@
+{
+  "name": "e-commerce-challenge-one",
+  "version": "1.0.0",
+  "description": "projeto desenvolvido para consoldidar conhecimentos adquiridos durante a formação de front-end na alura",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinivasq/e-commerce-challenge-ONE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinivasq/e-commerce-challenge-ONE/issues"
+  },
+  "homepage": "https://github.com/vinivasq/e-commerce-challenge-ONE#readme"
+}

@@ -1,0 +1,11 @@
+{
+    "products":[
+        {
+            "id": 0,
+            "category": "Teste",
+            "name": "Produto Teste",
+            "price": "R$: 15,00",
+            "description": "Testando API"
+        }
+    ]
+}

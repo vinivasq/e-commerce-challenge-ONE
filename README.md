@@ -1,5 +1,5 @@
 # e-commerce-challenge-ONE
-Site desenvolvido para conclusão do desafio sprint 02 da trilha de front-end o programa Oracle Next Education na Alura
+Site desenvolvido para conclusão do desafio sprint 02 e 03 da formação front-end, programa Oracle Next Education na Alura
 
 Acesse o projeto aqui: https://vinivasq.github.io/e-commerce-challenge-ONE/
 
