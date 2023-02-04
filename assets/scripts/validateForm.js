@@ -2,7 +2,7 @@ const validateFields = (input) => {
     
     if (input.value.trim() == '') {
         input.setCustomValidity('O campo não pode estar em branco')
-    } else if(input.dataset.type == "price" && input.value == "R$0,00") {
+    } else if(input.dataset.type == "productPrice" && input.value == "R$0,00") {
         input.setCustomValidity('O preço deve ser maior que R$ 0,00.')
     } else {
         input.setCustomValidity('')
@@ -56,16 +56,13 @@ const errorMessages = {
                 (não pode conter espaços)
             `
     },
-    imageURL: {
-        customError: 'O campo "Imagem" não pode ficar em branco.'
-    },
-    category: {
+    productCategory: {
         customError: 'O campo "Categoria" não pode ficar em branco.'
     },
     productName: {
         customError: 'O campo "Nome do produto" não pode ficar em branco.'
     },
-    price: {
+    productPrice: {
         customError: 'O preço do produto deve ser maior do que R$ 0,00.'
     },
     productDescription: {
@@ -89,7 +86,7 @@ const inputs = document.querySelectorAll('input')
 const textareas = document.querySelectorAll("textarea")
 
 inputs.forEach(input => {
-    if(input.dataset.type == "price") setMaskMoney(input)      
+    if(input.dataset.type == "productPrice") setMaskMoney(input)      
     
     input.addEventListener('blur', () => {
         validateFields(input)
@@ -114,7 +111,7 @@ forms.forEach(form => {
 
         inputs.forEach(input => {
             input.value = ''
-            if(input.dataset.type == "price") setMaskMoney(input)
+            if(input.dataset.type == "productPrice") setMaskMoney(input)
         })
         textareas.forEach(textarea => textarea.value = '')
     })

@@ -1,4 +1,9 @@
 const fileHandler = (file, name, type) => {
+    const reader = new FileReader()
+    const imgName = document.querySelector('.dropzone__description')
+    
+    if(imgName != null) imgName.remove()
+
     if(type.split('/')[0] !== 'image'){
         errorMessage.innerHTML = `<i class="fa-solid fa-circle-info"></i> Tipo de arquivo inválido. Por favor, selecione uma imagem.`
         
@@ -6,10 +11,7 @@ const fileHandler = (file, name, type) => {
     }
     errorMessage.innerHTML = ''
     
-    const imgName = document.querySelector('.dropzone__description')
-    if(imgName != null) imgName.remove()
     
-    const reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = () => {
         dropZone.innerHTML = ''
@@ -19,13 +21,12 @@ const fileHandler = (file, name, type) => {
         const img = document.createElement("img");
         const imgDescription = document.createElement("span")
         
+        img.src = productImage
+        img.classList.add('productImage')
         imgDescription.classList.add('dropzone__description')
         imgDescription.innerHTML = name
-        img.src = productImage
         dropZone.appendChild(img)
         dropZoneContainer.appendChild(imgDescription )
-
-        localStorage.setItem('productImage', JSON.stringify(productImage))
     }
 } 
 
