@@ -19,5 +19,7 @@ form.addEventListener('submit', async(e) => {
         alert("produto cadastrado com sucesso!")
     } catch (error) {
         console.log(error);
+
+        alert("Infelizmente, não foi possível adicionar o produto")
     }
 })

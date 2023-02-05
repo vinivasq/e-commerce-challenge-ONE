@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vinivasq/e-commerce-challenge-ONE/issues"
   },
-  "homepage": "https://github.com/vinivasq/e-commerce-challenge-ONE#readme"
+  "homepage": "https://github.com/vinivasq/e-commerce-challenge-ONE#readme",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
 }

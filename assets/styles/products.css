@@ -27,6 +27,10 @@
     font: var(--font-title);
 }
 
+.menu__title-products{
+    margin-bottom: 1rem;
+}
+
 .list__item{
     width: calc(52% - 1rem);
     display: flex;
@@ -35,7 +39,8 @@
 }
 
 .item__image{
-    width: 100%;
+    width: auto;
+    height: 100%;
 }
 
 .item__title{
