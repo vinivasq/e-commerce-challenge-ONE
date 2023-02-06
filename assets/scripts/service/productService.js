@@ -26,7 +26,10 @@ const deleteProduct = (id) => {
         method:'DELETE',
     }) .then(response => {
         if (!response.ok) {
-            alert('Não foi possível excluir o produto')
+            alert(`
+                Não foi possível deletar o produto.
+                Verifique se não está tentando deletar um produto modelo "Produto XYZ".
+            `)
         }
     })
 }

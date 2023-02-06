@@ -9,12 +9,12 @@ const createProduct = (image, name, price) => {
     `
 }
 
-const createCategory = (name, product) => {
+const createCategory = (id, name, product) => {
     return `
         <h2 class="menu__title menu__title-products">${name}</h3>
         <div class="categorie__products">
             <ul class="products__list">
-                <li class="list__item">
+                <li id="${id}" class="list__item">
                     ${product}
                 </li>
             </ul>
@@ -22,11 +22,9 @@ const createCategory = (name, product) => {
     `
 }
 
-
-const categories = document.querySelectorAll('.categorie')
-
-
 const render = async() => {
+    const categories = document.querySelectorAll('.categorie')
+
     try {
         const products = await productService.listProducts()
         
@@ -41,15 +39,16 @@ const render = async() => {
                     const list = category.querySelector(".products__list")
                     const newProduct = document.createElement("li")
                     newProduct.classList.add("list__item")
+                    newProduct.setAttribute("id", product.id)
                     newProduct.innerHTML = createProduct(product.image, product.name, product.price)
                     list.appendChild(newProduct)
                 }
             })
-    
+            
             if (!categoriesNames.some(category => category.toLowerCase() == product.category.toLowerCase())) {
                 const newCategory = document.createElement("section")
                 newCategory.classList.add("categorie")
-                newCategory.innerHTML = createCategory(product.category, 
+                newCategory.innerHTML = createCategory(product.id, product.category, 
                     createProduct(product.image, product.name, product.price))
                 categories[categories.length - 1].parentElement.appendChild(newCategory)
             }

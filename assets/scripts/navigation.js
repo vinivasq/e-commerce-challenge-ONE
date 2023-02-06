@@ -12,10 +12,10 @@ buttons.forEach(button => {
             location.href = '#console'
         })
     }
-    
-    if(button.dataset.type == 'buttonManager'){
+
+    if(button.dataset.type == 'allProducts') {
         button.addEventListener('click', () => {
-            location.href = './products-manager.html'
+            location.href = './products.html'
         })
     }
 

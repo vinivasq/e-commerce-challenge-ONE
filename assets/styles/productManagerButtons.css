@@ -1,15 +1,14 @@
-.item__buttons {
-    display: flex;
+.item__button {
     position: absolute;
     top: 0.5rem;
     right: 0;
-}
-
-.item__button {
     background-color: transparent;
-    /* color: var(--main-color); */
     color: #FFFFFF;
     font-size: 1.375rem;
+}
+
+.item__button-delete{
+    right: 2rem;
 }
 
 .list__item{

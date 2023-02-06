@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/styles/header.css">
     <link rel="stylesheet" href="../assets/styles/categories.css">
     <link rel="stylesheet" href="../assets/styles/products.css">
+    <link rel="stylesheet" href="../assets/styles/productManagerButtons.css">
     <link rel="stylesheet" href="../assets/styles/form.css">
     <link rel="stylesheet" href="../assets/styles/footer.css">
     <title>AluraGeek - Produtos</title>
@@ -21,6 +22,8 @@
                 <a href="./index.html">
                     <div class="navbar__logo__svg"></div>
                 </a>
+                <button class="button button-secondary" data-type="buttonManager">Modo administrador</button>
+
                 
                 <div class="navbar__searchbar">
                     <input type="text" class="searchbar__input" placeholder="O que você deseja encontrar?"> 
@@ -221,6 +224,8 @@
     </footer>
     <script src="../assets/scripts/navigation.js"></script>
     <script type="module" src="../assets/scripts/controller/listProduct.js"></script>
+    <script src="../assets/scripts/managerMode.js"></script>
+    <script type="module" src="../assets/scripts/controller/deleteProduct.js"></script>
     <script src="../assets/scripts/validateForm.js"></script>
 </body>
 </html>

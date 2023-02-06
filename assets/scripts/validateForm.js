@@ -84,7 +84,6 @@ const setMaskMoney = (input) => {
 const forms = document.querySelectorAll('.form__container')
 const inputs = document.querySelectorAll('input')
 const textareas = document.querySelectorAll("textarea")
-const isLogged = false
 
 inputs.forEach(input => {
     if(input.dataset.type == "productPrice") setMaskMoney(input)      
@@ -105,9 +104,8 @@ forms.forEach(form => {
         e.preventDefault()
 
         if (form.dataset.type == "form-login") {
-            isLogged = true
-            localStorage.setItem("isLogged", JSON.stringify(isLogged))
-            location.href = './products-manager.html'
+            localStorage.setItem("isLogged", "true")
+            location.href = './products.html'
         }
 
         inputs.forEach(input => {
