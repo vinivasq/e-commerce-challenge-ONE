@@ -27,6 +27,17 @@ const showErrorMessage = (input) => {
     return message
 }
 
+const setMaskMoney = (input) => {
+    SimpleMaskMoney.setMask(input, {
+        prefix: 'R$',
+        fixed: true,
+        fractionDigits: 2,
+        decimalSeparator: ',',
+        thousandsSeparator: '.',
+        cursor: 'end'
+    })
+} 
+
 const errorTypes = [
     'customError',
     'patternMismatch',
@@ -69,17 +80,6 @@ const errorMessages = {
         customError: 'O campo "Descrição do produto" não pode ficar em branco.'
     }
 }
-
-const setMaskMoney = (input) => {
-    SimpleMaskMoney.setMask(input, {
-        prefix: 'R$',
-        fixed: true,
-        fractionDigits: 2,
-        decimalSeparator: ',',
-        thousandsSeparator: '.',
-        cursor: 'end'
-    })
-}  
 
 const forms = document.querySelectorAll('.form__container')
 const inputs = document.querySelectorAll('input')

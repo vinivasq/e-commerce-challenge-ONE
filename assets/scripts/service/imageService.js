@@ -1,3 +1,14 @@
+export const imageLoader = (image) => {
+    const dropZone = document.querySelector('[data-dropzone]')
+    const img = document.createElement("img");
+    
+    dropZone.innerHTML = ''
+    dropZone.classList.add('filled')
+    img.src = image
+    img.classList.add('productImage')
+    dropZone.appendChild(img)
+}
+
 const fileHandler = (file, name, type) => {
     const reader = new FileReader()
     const imgName = document.querySelector('.dropzone__description')
@@ -14,18 +25,11 @@ const fileHandler = (file, name, type) => {
     
     reader.readAsDataURL(file)
     reader.onloadend = () => {
-        dropZone.innerHTML = ''
-        dropZone.classList.add('filled')
+        imageLoader(reader.result)
         
-        const productImage = reader.result
-        const img = document.createElement("img");
         const imgDescription = document.createElement("span")
-        
-        img.src = productImage
-        img.classList.add('productImage')
         imgDescription.classList.add('dropzone__description')
         imgDescription.innerHTML = name
-        dropZone.appendChild(img)
         dropZoneContainer.appendChild(imgDescription )
     }
 } 
