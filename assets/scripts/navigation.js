@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll('button')
 buttons.forEach(button => {
     if (button.dataset.type == 'buttonLogin') {
         button.addEventListener('click', () => {
-            location.href = './login.html'
+            location.href = './screens/login.html'
         }) 
     }
     
