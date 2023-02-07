@@ -14,7 +14,7 @@ const editButton = () => {
 }
 
 const managerButton = document.querySelector('[data-type="buttonManager"]')
-const isLogged = JSON.parse(localStorage.getItem('isLogged')) 
+const isLogged = JSON.parse(sessionStorage.getItem('isLogged')) 
 
 
 managerButton.addEventListener('click', () => {

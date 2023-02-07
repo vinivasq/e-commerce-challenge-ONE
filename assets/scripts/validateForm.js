@@ -104,7 +104,7 @@ forms.forEach(form => {
         e.preventDefault()
 
         if (form.dataset.type == "form-login") {
-            localStorage.setItem("isLogged", "true")
+            sessionStorage.setItem("isLogged", "true")
             location.href = './products.html'
         }
 

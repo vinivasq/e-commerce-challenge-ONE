@@ -21,7 +21,7 @@ buttons.forEach(button => {
 
     if(button.dataset.type == 'buttonNewProduct') {
         button.addEventListener('click', () => {
-            const isLogged = JSON.parse(localStorage.getItem('isLogged'))
+            const isLogged = JSON.parse(sessionStorage.getItem('isLogged'))
             isLogged ? location.href = "./add-new-product.html" : location.href = "./login.html"
         })
     }
