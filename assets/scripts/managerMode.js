@@ -11,31 +11,40 @@ const editButton = () => {
 
 const managerButton = document.querySelector('[data-type="buttonManager"]')
 const isLogged = JSON.parse(sessionStorage.getItem('isLogged')) 
+let managerMode = false
 
 managerButton.addEventListener('click', () => {
-    
-    if (!isLogged) {
-        location.href = './login.html'
-    }
-
+    managerMode = !managerMode
     const products = document.querySelectorAll('.list__item')
-
-    products.forEach(product => {
-        product.appendChild(deleteButton())
-        product.appendChild(editButton())
-        
-        const buttonEdit = product.querySelector('.item__button-edit')
     
-        buttonEdit.addEventListener('click', (e) => {
-           const productId = e.target.parentElement.id
+    if (isLogged == 'false') {
+        location.href = './login.html'
+        return
+    }
+    
+    if(managerMode){
+        products.forEach(product => {
+            product.appendChild(deleteButton())
+            product.appendChild(editButton())
             
-            if(productId == '') {
-                alert('Este produto não pode ser editado pois é um produto modelo.');
-                return
-            }
-
-            sessionStorage.setItem('id', productId)
-            location.href = './edit-product.html'
+            const buttonEdit = product.querySelector('.item__button-edit')
+        
+            buttonEdit.addEventListener('click', (e) => {
+               const productId = e.target.parentElement.id
+                
+                if(productId == '') {
+                    alert('Este produto não pode ser editado pois é um produto modelo.');
+                    return
+                }
+    
+                sessionStorage.setItem('id', productId)
+                location.href = './edit-product.html'
+            })
         })
-    })
+    } else {
+        products.forEach(product => {
+            const buttons = product.querySelectorAll('.item__button')
+            buttons.forEach(button => button.remove())
+        })
+    }
 })
