@@ -23,18 +23,22 @@ const createCategory = (id, name, product) => {
 }
 
 const render = async() => {
-    const categories = document.querySelectorAll('.categorie')
-
+    
     try {
         const products = await productService.listProducts()
+        const categoriesNames = []
         
         products.forEach(product => {
-            const categoriesNames = []
+            const categories = document.querySelectorAll('.categorie')
             
             categories.forEach(category => {
+
                 const categoryName = category.firstElementChild.innerHTML
-                categoriesNames.push(categoryName)
-    
+
+                if(!categoriesNames.some(category => category == categoryName)) {
+                    categoriesNames.push(categoryName)
+                }
+                
                 if(categoryName.toLowerCase() == product.category.toLowerCase()){
                     const list = category.querySelector(".products__list")
                     const newProduct = document.createElement("li")
@@ -43,15 +47,16 @@ const render = async() => {
                     newProduct.innerHTML = createProduct(product.image, product.name, product.price)
                     list.appendChild(newProduct)
                 }
+
+                if (!categoriesNames.some(category => category.toLowerCase() == product.category.toLowerCase())) {
+                    const newCategory = document.createElement("section")
+                    newCategory.classList.add("categorie")
+                    newCategory.innerHTML = createCategory(product.id, product.category, 
+                        createProduct(product.image, product.name, product.price))
+                    categoriesNames.push(newCategory.firstElementChild.innerHTML)
+                    categories[categories.length - 1].parentElement.appendChild(newCategory)
+                }
             })
-            
-            if (!categoriesNames.some(category => category.toLowerCase() == product.category.toLowerCase())) {
-                const newCategory = document.createElement("section")
-                newCategory.classList.add("categorie")
-                newCategory.innerHTML = createCategory(product.id, product.category, 
-                    createProduct(product.image, product.name, product.price))
-                categories[categories.length - 1].parentElement.appendChild(newCategory)
-            }
         })
     } catch (error) {
         console.log(error);
@@ -61,7 +66,6 @@ const render = async() => {
             Tente iniciar o json-server.
         `)
     }
-
 }
 
 render()
