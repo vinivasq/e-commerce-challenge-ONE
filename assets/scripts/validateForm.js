@@ -103,6 +103,10 @@ forms.forEach(form => {
     form.addEventListener('submit', (e) => {
         e.preventDefault()
 
+        if(form.dataset.type == "form-editProduct") {
+            return
+        }
+
         if (form.dataset.type == "form-login") {
             sessionStorage.setItem("isLogged", "true")
             location.href = './products.html'

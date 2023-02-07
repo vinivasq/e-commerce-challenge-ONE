@@ -1,3 +1,13 @@
+const listProducts = () => {
+    return fetch(`http://localhost:3000/products`)
+        .then(response => {
+            if(response.ok){
+                return response.json()
+            }
+            throw Error('Não foi possível listar os produtos.')
+        })
+}
+
 const postProduct = (image, category, name, price, description) => {
     return fetch(`http://localhost:3000/products`, {
         method: 'POST',
@@ -20,6 +30,22 @@ const postProduct = (image, category, name, price, description) => {
     }) 
 }
 
+const editProduct = (id, image, category, name, price, description) => {
+    return fetch(`http://localhost:3000/products/${id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            image: image,
+            category: category,
+            name: name,
+            price: price,
+            description: description
+        })
+    })
+}
+
 const deleteProduct = (id) => {
     return fetch(`http://localhost:3000/products/${id}`, {
         method:'DELETE',
@@ -33,18 +59,9 @@ const deleteProduct = (id) => {
     })
 }
 
-const listProducts = () => {
-    return fetch(`http://localhost:3000/products`)
-        .then(response => {
-            if(response.ok){
-                return response.json()
-            }
-            throw Error('Não foi possível listar os produtos.')
-        })
-}
-
 export const productService = {
     postProduct,
     deleteProduct,
-    listProducts
+    listProducts,
+    editProduct
 }

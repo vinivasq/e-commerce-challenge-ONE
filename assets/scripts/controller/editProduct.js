@@ -22,6 +22,22 @@ const form = document.querySelector('[data-type="form-editProduct"]')
 
 listProduct(productId)
 
-form.addEventListener('submit', () => {
+form.addEventListener('submit', async(e) => {
+    e.preventDefault()
 
+    const productImage = document.querySelector('.productImage').src
+    const productCategory = document.querySelector('[data-type="productCategory"]').value
+    const productName = document.querySelector('[data-type="productName"]').value
+    const productPrice = document.querySelector('[data-type="productPrice"]').value
+    const productDescription = document.querySelector('[data-type="productDescription"]').value
+
+    try {
+        await productService.editProduct(productId, productImage, productCategory, productName, productPrice, productDescription)
+
+        alert("produto editado com sucesso!")
+    } catch (error) {
+        console.log(error);
+
+        alert("Infelizmente, não foi possível editar o produto")
+    }
 })
