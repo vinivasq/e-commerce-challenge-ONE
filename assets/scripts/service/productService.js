@@ -1,11 +1,10 @@
-const postProduct = (id, image, category, name, price, description) => {
+const postProduct = (image, category, name, price, description) => {
     return fetch(`http://localhost:3000/products`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            id: id,
             image: image,
             category: category,
             name: name,

@@ -22,7 +22,6 @@ const fileHandler = (file, name, type) => {
         const imgDescription = document.createElement("span")
         
         img.src = productImage
-        console.log(productImage);
         img.classList.add('productImage')
         imgDescription.classList.add('dropzone__description')
         imgDescription.innerHTML = name
