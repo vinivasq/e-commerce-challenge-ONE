@@ -27,7 +27,7 @@ managerButton.addEventListener("click", () => {
   managerMode = !managerMode;
   const products = document.querySelectorAll(".list__item");
 
-  if (isLogged == "false") {
+  if (!isLogged) {
     location.href = "./login.html";
     return;
   }
