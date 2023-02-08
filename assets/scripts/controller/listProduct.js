@@ -11,7 +11,7 @@ const createProduct = (image, name, price) => {
 
 const createCategory = (id, name, product) => {
   return `
-    <h2 class="menu__title menu__title-products">${name}</h3>
+    <h2 class="menu__title menu__title-products">${name}</h2>
     <div class="categorie__products">
       <ul class="products__list">
         <li id="${id}" class="list__item">
