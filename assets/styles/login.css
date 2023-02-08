@@ -1,20 +1,20 @@
 .login {
-    margin-top: 4rem;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  margin-top: 4rem;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.button-primary-login{
-    align-self: center;
-    width: 10rem;
+.button-primary-login {
+  align-self: center;
+  width: 10rem;
 }
 
 @media screen and (min-width: 992px) {
-    .button-primary-login{
-        width: 100%;
-    }
+  .button-primary-login {
+    width: 100%;
+  }
 }

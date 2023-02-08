@@ -1,78 +1,78 @@
-.form__container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    align-items: center;
+.form__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
 }
 
-.form__container-footer{
-    align-items: flex-start;
+.form__container-footer {
+  align-items: flex-start;
 }
 
-.field__container{
-    box-shadow: 1px 0px 5px #00000027;
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    width: 100%;
-    padding: 0.5rem 0.75rem;
+.field__container {
+  box-shadow: 1px 0px 5px #00000027;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
 }
 
-.field__container-error{
-    align-self: flex-start;
-    background-color: transparent;
-    color: var(--main-color);
-    font: var(--font-light-sm);
+.field__container-error {
+  align-self: flex-start;
+  background-color: transparent;
+  color: var(--main-color);
+  font: var(--font-light-sm);
 }
 
-.field__container-error-footer{
-    color: var(--black);
+.field__container-error-footer {
+  color: var(--black);
 }
 
-.field__container-error-image{
-    align-self: center;
+.field__container-error-image {
+  align-self: center;
 }
 
-.field__container-imageSelector{
-    background-color: transparent;
-    box-shadow: none;
+.field__container-imageSelector {
+  background-color: transparent;
+  box-shadow: none;
 }
 
-.form__title{
-    font: var(--font-title);
+.form__title {
+  font: var(--font-title);
 }
 
-.form__title-footer{
-    font: var(--font-bold);
-    align-self: flex-start;
+.form__title-footer {
+  font: var(--font-bold);
+  align-self: flex-start;
 }
 
-.form__label{
-    font: var(--font-light-sm);
-    color: var(--black-500);
-    width: 100%;
+.form__label {
+  font: var(--font-light-sm);
+  color: var(--black-500);
+  width: 100%;
 }
 
-.form__input{
-    width: 100%;
-    font: var(--font-light);
+.form__input {
+  width: 100%;
+  font: var(--font-light);
 }
 
-.form__input:focus{
-    outline: none;
+.form__input:focus {
+  outline: none;
 }
 
-.form__textarea{
-    width: 100%;
-    font: var(--font-light);
+.form__textarea {
+  width: 100%;
+  font: var(--font-light);
 }
 
-.form__textarea:focus{
-    outline: none;
+.form__textarea:focus {
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
-    .form__container-login{
-        width: 50%;
-    }
+  .form__container-login {
+    width: 50%;
+  }
 }

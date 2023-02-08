@@ -1,231 +1,339 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/70ad3fdfa7.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/styles/layout.css">
-    <link rel="stylesheet" href="../assets/styles/header.css">
-    <link rel="stylesheet" href="../assets/styles/categories.css">
-    <link rel="stylesheet" href="../assets/styles/products.css">
-    <link rel="stylesheet" href="../assets/styles/productManagerButtons.css">
-    <link rel="stylesheet" href="../assets/styles/form.css">
-    <link rel="stylesheet" href="../assets/styles/footer.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/70ad3fdfa7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles/layout.css" />
+    <link rel="stylesheet" href="../assets/styles/header.css" />
+    <link rel="stylesheet" href="../assets/styles/categories.css" />
+    <link rel="stylesheet" href="../assets/styles/products.css" />
+    <link rel="stylesheet" href="../assets/styles/productManagerButtons.css" />
+    <link rel="stylesheet" href="../assets/styles/form.css" />
+    <link rel="stylesheet" href="../assets/styles/footer.css" />
     <title>AluraGeek - Produtos</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../index.html">
-                    <div class="navbar__logo__svg"></div>
-                </a>
-                <button class="button button-secondary" data-type="buttonManager">Modo administrador</button>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <div class="navbar__logo__svg"></div>
+          </a>
+          <button class="button button-secondary" data-type="buttonManager">
+            Modo administrador
+          </button>
 
-                
-                <div class="navbar__searchbar">
-                    <input type="text" class="searchbar__input" placeholder="O que você deseja encontrar?"> 
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-
-            </nav>
-        </div>
+          <div class="navbar__searchbar">
+            <input
+              type="text"
+              class="searchbar__input"
+              placeholder="O que você deseja encontrar?"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
-        <section class="products container">
-            <div class="products__menu">
-                <h1 class="menu__title">Todos os produtos</h1>
-                <div>
-                    <button class="button button-primary" data-type="buttonNewProduct">Adicionar produto</button>
-                </div>
-            </div>
+      <section class="products container">
+        <div class="products__menu">
+          <h1 class="menu__title">Todos os produtos</h1>
+          <div>
+            <button class="button button-primary" data-type="buttonNewProduct">
+              Adicionar produto
+            </button>
+          </div>
+        </div>
 
-            <section class="categories">
-                <section class="categorie">
-                    <h2 class="menu__title menu__title-products">Star Wars</h3>
-                    <div class="categorie__products">
-                        <ul class="products__list">
-                            <li class="list__item">
-                                <img src="../assets/images/star-wars/unsplash_1VV1MRafd7A.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/star-wars/unsplash_4OHkK555s1A.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/star-wars/unsplash_6FDXGY9J6y4.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/star-wars/unsplash_epRFE_hBNjo.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/star-wars/unsplash_KeGToDVN0l4.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/star-wars/unsplash_R8L1l9RN198.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section id="console" class="categorie">
-                    <h2 class="menu__title menu__title-products">Consoles</h3>
-                    <div class="categorie__products">
-                        <ul class="products__list">
-                            <li class="list__item">
-                                <img src="../assets/images/consoles/unsplash_0POwK6iAiRQ.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/consoles/unsplash_caNzzoxls8Q.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/consoles/unsplash_k-xYhI3-gJM.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/consoles/unsplash_wa5z9o9fgjw.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/consoles/unsplash_Zjn4dT993-g.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/consoles/unsplash_ZV7lnfyQLmA.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="categorie">
-                    <h2 class="menu__title menu__title-products">Diversos</h3>
-                    <div class="categorie__products">
-                        <ul class="products__list">
-                            <li class="list__item">
-                                <img src="../assets/images/diversos/unsplash_bUgaIaZysH0.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/diversos/unsplash_fMP-oCze3AY.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/diversos/unsplash_jMT6BrgBuXU.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/diversos/unsplash_MxVkWPiJALs.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/diversos/unsplash_r27umXAelDc.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                            <li class="list__item">
-                                <img src="../assets/images/diversos/unsplash_sYVY_ZKwaxU.jpg" alt="Imagem do produto" class="item__image">
-                                <h3 class="item__title">Produto XYZ</h3>
-                                <p class="item__price">R$60,00</p>
-                                <a href="" class="item__link">Ver produto</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-               
-            </section>
+        <section class="categories">
+          <section class="categorie">
+            <h2 class="menu__title menu__title-products">Star Wars</h2>
+            <div class="categorie__products">
+              <ul class="products__list">
+                <li class="list__item">
+                  <img
+                    src="../assets/images/star-wars/unsplash_1VV1MRafd7A.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/star-wars/unsplash_4OHkK555s1A.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/star-wars/unsplash_6FDXGY9J6y4.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/star-wars/unsplash_epRFE_hBNjo.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/star-wars/unsplash_KeGToDVN0l4.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/star-wars/unsplash_R8L1l9RN198.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="console" class="categorie">
+            <h2 class="menu__title menu__title-products">Consoles</h2>
+            <div class="categorie__products">
+              <ul class="products__list">
+                <li class="list__item">
+                  <img
+                    src="../assets/images/consoles/unsplash_0POwK6iAiRQ.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/consoles/unsplash_caNzzoxls8Q.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/consoles/unsplash_k-xYhI3-gJM.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/consoles/unsplash_wa5z9o9fgjw.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/consoles/unsplash_Zjn4dT993-g.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/consoles/unsplash_ZV7lnfyQLmA.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="categorie">
+            <h2 class="menu__title menu__title-products">Diversos</h2>
+            <div class="categorie__products">
+              <ul class="products__list">
+                <li class="list__item">
+                  <img
+                    src="../assets/images/diversos/unsplash_bUgaIaZysH0.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/diversos/unsplash_fMP-oCze3AY.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/diversos/unsplash_jMT6BrgBuXU.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/diversos/unsplash_MxVkWPiJALs.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/diversos/unsplash_r27umXAelDc.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+                <li class="list__item">
+                  <img
+                    src="../assets/images/diversos/unsplash_sYVY_ZKwaxU.jpg"
+                    alt="Imagem do produto"
+                    class="item__image"
+                  />
+                  <h3 class="item__title">Produto XYZ</h3>
+                  <p class="item__price">R$60,00</p>
+                  <a href="" class="item__link">Ver produto</a>
+                </li>
+              </ul>
+            </div>
+          </section>
         </section>
+      </section>
     </main>
     <footer>
-        <section class="footer container">
-            <div class="footer__info">
-                <div class="footer__logo"></div>
-                <a href="" class="info__link">Quem somos nós</a>
-                <a href="" class="info__link">Política de privacidade</a>
-                <a href="" class="info__link">Programa fidelidade</a>
-                <a href="" class="info__link">Nossas lojas</a>
-                <a href="" class="info__link">Quero ser franqueado</a>
-                <a href="" class="info__link">Anuncie aqui</a>
-            </div>
-            <form action="submit" class="form__container form__container-footer" data-type="form-footer">
-                <h2 class="form__title-footer">Fale conosco</h2>
-                <div class="field__container">
-                    <label for="name" class="form__label">Nome</label>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        placeholder="Fulano da Silva" 
-                        required maxlength="40" 
-                        class="form__input"
-                        data-type="name"
-                    >
-                </div>
-                <span class="field__container-error field__container-error-footer"></span>
-                <div class="field__container">
-                    <label for="text" class="form__label">Digite sua mensagem</label>
-                    <textarea 
-                        name="text" 
-                        class="form__textarea" 
-                        placeholder="Sua mensagem aqui" 
-                        required
-                        maxlength="120"
-                        data-type="message"    
-                    ></textarea>
-                </div>
-                <span class="field__container-error field__container-error-footer"></span>
-                <div>
-                    <button class="button button-primary" data-button-sendMessage>Enviar mensagem</button>
-                </div>
-            </form>
-        </section>
-        <section class="copyright">
-            <p>Desenvolvido por Vinícius Vasques. <a href="https://www.linkedin.com/in/vinivasq/" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://github.com/vinivasq" target="_blank"><i class="fa-brands fa-github"></i></a></p> 
-        </section>
+      <section class="footer container">
+        <div class="footer__info">
+          <div class="footer__logo"></div>
+          <a href="" class="info__link">Quem somos nós</a>
+          <a href="" class="info__link">Política de privacidade</a>
+          <a href="" class="info__link">Programa fidelidade</a>
+          <a href="" class="info__link">Nossas lojas</a>
+          <a href="" class="info__link">Quero ser franqueado</a>
+          <a href="" class="info__link">Anuncie aqui</a>
+        </div>
+        <form
+          action="submit"
+          class="form__container form__container-footer"
+          data-type="form-footer"
+        >
+          <h2 class="form__title-footer">Fale conosco</h2>
+          <div class="field__container">
+            <label for="name" class="form__label">Nome</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Fulano da Silva"
+              required
+              maxlength="40"
+              class="form__input"
+              data-type="name"
+            />
+          </div>
+          <span
+            class="field__container-error field__container-error-footer"
+          ></span>
+          <div class="field__container">
+            <label for="text" class="form__label">Digite sua mensagem</label>
+            <textarea
+              name="text"
+              class="form__textarea"
+              placeholder="Sua mensagem aqui"
+              required
+              maxlength="120"
+              data-type="message"
+            ></textarea>
+          </div>
+          <span
+            class="field__container-error field__container-error-footer"
+          ></span>
+          <div>
+            <button class="button button-primary" data-button-sendMessage>
+              Enviar mensagem
+            </button>
+          </div>
+        </form>
+      </section>
+      <section class="copyright">
+        <p>
+          Desenvolvido por Vinícius Vasques.
+          <a href="https://www.linkedin.com/in/vinivasq/" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/vinivasq" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </p>
+      </section>
     </footer>
     <script src="../assets/scripts/navigation.js"></script>
-    <script type="module" src="../assets/scripts/controller/listProduct.js"></script>
+    <script
+      type="module"
+      src="../assets/scripts/controller/listProduct.js"
+    ></script>
     <script src="../assets/scripts/managerMode.js"></script>
-    <script type="module" src="../assets/scripts/controller/deleteProduct.js"></script>
+    <script
+      type="module"
+      src="../assets/scripts/controller/deleteProduct.js"
+    ></script>
     <script src="../assets/scripts/validateForm.js"></script>
-</body>
+  </body>
 </html>
