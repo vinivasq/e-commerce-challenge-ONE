@@ -28,6 +28,10 @@
   padding: 0.5rem 2rem;
 }
 
+.navbar .button-secondary-manager {
+  padding: 0.5rem 0.75rem;
+}
+
 .navbar__searchbar {
   display: flex;
   align-items: center;
