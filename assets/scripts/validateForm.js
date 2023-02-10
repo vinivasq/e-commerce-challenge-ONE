@@ -75,7 +75,7 @@ const errorMessages = {
 };
 
 const forms = document.querySelectorAll(".form__container");
-const inputs = document.querySelectorAll("input");
+const inputs = document.querySelectorAll(".form__input");
 const textareas = document.querySelectorAll("textarea");
 
 inputs.forEach((input) => {
@@ -98,6 +98,16 @@ forms.forEach((form) => {
 
     if (form.dataset.type == "form-editProduct") {
       return;
+    }
+
+    if (form.dataset.type = "form-newProduct"){
+      try {
+        document.querySelector(".productImage").src;
+      } catch (error) {
+        alert('Selecione uma imagem')
+        throw Error('Selecione uma imagem')
+      }
+      return
     }
 
     if (form.dataset.type == "form-login") {

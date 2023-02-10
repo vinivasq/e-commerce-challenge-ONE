@@ -28,7 +28,10 @@
           <a href="../index.html">
             <div class="navbar__logo__svg"></div>
           </a>
-          <button class="button button-secondary button-secondary-manager" data-type="buttonManager">
+          <button
+            class="button button-secondary button-secondary-manager"
+            data-type="buttonManager"
+          >
             Modo administrador
           </button>
 
@@ -38,7 +41,9 @@
               class="searchbar__input"
               placeholder="O que você deseja encontrar?"
             />
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="searchbar__button" data-type="buttonSearchbar">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
         </nav>
       </div>
@@ -329,6 +334,7 @@
       type="module"
       src="../assets/scripts/controller/listProduct.js"
     ></script>
+    <script type="module" src="../assets/scripts/controller/searchBarController.js"></script>
     <script src="../assets/scripts/managerMode.js"></script>
     <script
       type="module"

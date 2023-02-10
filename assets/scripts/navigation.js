@@ -27,4 +27,13 @@ buttons.forEach((button) => {
         : (location.href = "./login.html");
     });
   }
+
+  if (button.dataset.type == "buttonSearchbar-home") {
+    button.addEventListener("click", () => {
+      const inputSearchbar = document.querySelector(".searchbar__input");
+      sessionStorage.setItem("searchParams", JSON.stringify(inputSearchbar.value));
+
+      location.href = "./screens/products.html";
+    });
+  }
 });
