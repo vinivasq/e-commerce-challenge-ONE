@@ -96,11 +96,16 @@ forms.forEach((form) => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    if (form.dataset.type == "form-login") {
+      sessionStorage.setItem("isLogged", "true");
+      location.href = "./products.html";
+    }
+
     if (form.dataset.type == "form-editProduct") {
       return;
     }
 
-    if (form.dataset.type = "form-newProduct"){
+    if (form.dataset.type == "form-newProduct"){
       try {
         document.querySelector(".productImage").src;
       } catch (error) {
@@ -108,11 +113,6 @@ forms.forEach((form) => {
         throw Error('Selecione uma imagem')
       }
       return
-    }
-
-    if (form.dataset.type == "form-login") {
-      sessionStorage.setItem("isLogged", "true");
-      location.href = "./products.html";
     }
 
     inputs.forEach((input) => {
