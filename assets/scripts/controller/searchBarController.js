@@ -1,6 +1,7 @@
 import { productService } from "../service/productService.js";
+import { mobileSearchbar } from "./searchbarMobileHandler.js";
 
-const listProducts = (products) => {
+const resultList = (products) => {
   const categories = document.querySelector(".categories");
   const productContainer = document.querySelector(".products");
   const searchTitle = productContainer.querySelector(".menu__title");
@@ -31,7 +32,7 @@ const filterByName = async (searchParams) => {
     }
   });
 
-  listProducts(productsFound);
+  resultList(productsFound);
 };
 
 const inputSearchbar = document.querySelector(".searchbar__input");
@@ -39,6 +40,7 @@ const buttonSearchbar = document.querySelector('[data-type="buttonSearchbar"]');
 const searchParams = JSON.parse(sessionStorage.getItem("searchParams"));
 
 if (searchParams != "") filterByName(searchParams);
+if (window.innerWidth < 768 && searchParams != "") mobileSearchbar();
 
 inputSearchbar.value = searchParams;
 
@@ -47,13 +49,17 @@ inputSearchbar.addEventListener("blur", () => {
 });
 
 buttonSearchbar.addEventListener("click", () => {
-  const updatedSearchParams = JSON.parse(
-    sessionStorage.getItem("searchParams")
-  );
+  if (window.innerWidth < 768) {
+    mobileSearchbar();
+  } else {
+    const updatedSearchParams = JSON.parse(
+      sessionStorage.getItem("searchParams")
+    );
 
-  updatedSearchParams != ""
-    ? filterByName(updatedSearchParams)
-    : location.reload();
+    updatedSearchParams != ""
+      ? filterByName(updatedSearchParams)
+      : location.reload();
 
-  location.reload();
+    location.reload();
+  }
 });

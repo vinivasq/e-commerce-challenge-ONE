@@ -28,6 +28,7 @@ managerButton.addEventListener("click", () => {
   const products = document.querySelectorAll(".list__item");
 
   if (!isLogged) {
+    alert('Para entrar no modo administrador você precisar fazer login')
     location.href = "./login.html";
     return;
   }

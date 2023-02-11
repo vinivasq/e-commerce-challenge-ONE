@@ -37,8 +37,32 @@
   align-items: center;
 }
 
+.navbar__searchbar-home{
+  display: none;
+}
+
+.navbar__searchbar-active {
+  transition: all 300ms;
+  gap: 8px;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: var(--black-200);
+  padding: 0.5rem 1rem;
+}
+
 .searchbar__input {
   display: none;
+}
+
+.searchbar__input-active{
+  transition: all 300ms;
+  display: flex;
+  background-color: transparent;
+  font: var(--font-light-sm);
+}
+
+.searchbar__input:focus {
+  outline: none;
 }
 
 .searchbar__button {
@@ -49,6 +73,10 @@
   .navbar .button-secondary {
     order: 1;
     min-width: 10.375rem;
+  }
+
+  .navbar__searchbar-home{
+    display: flex;
   }
 
   .navbar__searchbar {
@@ -69,7 +97,6 @@
     font: var(--font-light-sm);
   }
 
-  .searchbar__input:focus {
-    outline: none;
-  }
+
+
 }
