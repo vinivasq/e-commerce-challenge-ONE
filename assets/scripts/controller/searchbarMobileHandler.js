@@ -8,17 +8,17 @@ export const mobileSearchbar = () => {
   buttonHeader.style.display = "none";
   navbarSearchbar.classList.add("navbar__searchbar-active");
   inputSearchbar.classList.add("searchbar__input-active");
-  inputSearchbar.focus()
+  inputSearchbar.focus();
 
-  inputSearchbar.addEventListener('blur', () => {
-    if(inputSearchbar.value == ''){
+  inputSearchbar.addEventListener("blur", () => {
+    if (inputSearchbar.value == "") {
       navbarSearchbar.classList.remove("navbar__searchbar-active");
       inputSearchbar.classList.remove("searchbar__input-active");
-      buttonHeader.style.display = 'flex'
+      buttonHeader.style.display = "flex";
     }
-  })
+  });
 
-  buttonSearchbar.addEventListener('click', () => {
+  buttonSearchbar.addEventListener("click", () => {
     location.reload();
-  })
+  });
 };
